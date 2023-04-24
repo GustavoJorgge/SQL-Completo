@@ -1,4 +1,5 @@
 use curso_sql;
+*.rb linguist-language=SQL
 
 insert into funcionarios values (1,'Fernando', 1400, 'TI');
 insert into funcionarios (nome,salario, departamento)values ('Guilherme', 2500, 'Departamento Pessoal');
