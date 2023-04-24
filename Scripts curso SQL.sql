@@ -1,6 +1,5 @@
 use curso_sql;
 
-
 insert into funcionarios values (1,'Fernando', 1400, 'TI');
 insert into funcionarios (nome,salario, departamento)values ('Guilherme', 2500, 'Departamento Pessoal');
 insert into funcionarios (nome,salario, departamento)values ('Maria', 1800, 'TI');
@@ -20,8 +19,8 @@ update funcionarios set salario = 2000 where id = 5; /*Atualizando salario apena
 
 delete from funcionarios where id = 4; /* Deletando o id 4 */
 
-insert into veiculos (funcionario_id, veiculos, placa) values (1, 'Gol', 'OWI-0056');
-insert into veiculos(funcionario_id, veiculos, placa) values (1, 'Corsa', 'OHG-0099');
+insert into veiculos (funcionario_id, veiculos, placa) values (1, 'Gol', 'OWI-6868');
+insert into veiculos(funcionario_id, veiculos, placa) values (1, 'Corsa', 'OHG-7979');
 insert into veiculos(funcionario_id, veiculos, placa) values (3, 'Moto', 'SBT-0099');
 insert into veiculos(funcionario_id, veiculos, placa) values (null, 'Fusca', 'TRA-5099');
 select*from veiculos;
@@ -160,7 +159,7 @@ create user 'GustavoJorge'@'localhost' identified by 'gustavo123'; /* Localhost 
 /*Realizando a permissão de acesso*/
 GRANT ALL ON curso_sql.* to 'GustavoJorge'@'localhost';
 
-create user 'GustavoJorge'@'%' identified by 'gustavoviagem';
+create user 'GustavoJorge'@'%' identified by 'gustavotour';
 GRANT SELECT ON curso_sql.* TO 'GustavoJorge'@'localhost';
 GRANT INSERT ON curso_sql.funcionarios TO 'GustavoJorge'@'localhost'; /* -> da acesso para inserir dados*/
 /*GRANT SELECT ON curso_sql.funcionarios TO 'GustavoJorge'@'%';*/
@@ -257,5 +256,3 @@ on estoque /* informando a tabela */
 for each row /* para cada uma das inserções */
 call limpa_pedidos(); /* execução */
 
-$ cat .gitattributes
-*.rb linguist-language=SQL
