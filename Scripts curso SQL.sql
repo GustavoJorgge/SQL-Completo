@@ -37,7 +37,6 @@ union /*union all não imprime registros duplicados*/
 select nome,salario from funcionarios  where id = 5;
 
 /* Scripts utilizando JOIN */
-use curso_sql;
 SELECT * FROM funcionarios;
 select * from veiculos;
 
@@ -69,7 +68,6 @@ select * from funcionarios inner join cpfs on funcionarios.id = cpfs.id;
 select * from funcionarios inner join cpfs using (id);/* Scripts para utilizar EQUI JOIN - FORMA REDUZIDA */
 
 /* Scripts para utilizar SELF JOIN - TABELAS RELACIONANDO COM ELA MESMO */
-use curso_sql;
 create table clientes 
 (
 id int unsigned not null auto_increment,
@@ -151,8 +149,6 @@ select nome,departamento from funcionarios where departamento in('Vendedora','De
 select nome,departamento from funcionarios where departamento NOT in(select departamento from funcionarios group by departamento having avg (salario) > 1800);
 
 /* GERENCIANDO ACESSOS */
-use curso_sql;
-
 /* Realizando a criação de usuario */
 /*create user 'nome usuario' @ 'local de acesso' identified by 'senha';*/
 /*create user 'Gustavo Jorge' @ '120.0.0.10' identified by 'gustavo123'; --> O usuario só conseguira acesso se ele estiver no local de ip informado (segurança)
